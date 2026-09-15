@@ -15,16 +15,19 @@ def number_guessing_game():
     while attempts < max_attempts:
         try:
             # Get user's guess
-            guess = int(input(" Enter your guess: "))
+            guess = int(input("Enter your guess: "))
 
             # Check if the guess is correct
-          if guess == secret_number:
-             print(f"Congratulations! You guessed the number {secret_number} correctly!")
-             break
-          elif guess < secret_number:
-             print("Too low! Try again.")
-          else:
-             print("Too high! Try again.")
+            if guess == secret_number:
+                print(
+                    f"Congratulations! You guessed the number "
+                    f"{secret_number} correctly!"
+                )
+                break
+            elif guess < secret_number:
+                print("Too low! Try again.")
+            else:
+                print("Too high! Try again.")
 
             # Increase the number of attempts
             attempts += 1
@@ -37,11 +40,15 @@ def number_guessing_game():
         print(f"Game over! The correct number was {secret_number}.")
 
     # Ask to play again
-    play_again = input("\n Do you want to play again? (yes/no): ").lower()
+    play_again = input(
+        "\nDo you want to play again? (yes/no): "
+    ).lower()
+
     if play_again == "yes":
         number_guessing_game()
     else:
         print("Thanks for playing! Goodbye.")
+
 
 # Run the game
 number_guessing_game()
