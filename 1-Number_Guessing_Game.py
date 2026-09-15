@@ -13,7 +13,9 @@ def number_guessing_game():
 
     # Start the game loop
     while attempts < max_attempts:
-        try:
+        try: # Remaining Attempts
+            remaining_attempts = max_attempts - attempts
+            print(f"Attempts remaining: {remaining_attempts}")
             # Get user's guess
             guess = int(input("Enter your guess: "))
             if guess < 1 or guess > 10:
