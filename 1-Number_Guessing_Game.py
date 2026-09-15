@@ -16,6 +16,9 @@ def number_guessing_game():
         try:
             # Get user's guess
             guess = int(input("Enter your guess: "))
+            if guess < 1 or guess > 10:
+              print("Please enter a number between 1 and 10.")
+              continue
 
             # Check if the guess is correct
             if guess == secret_number:
